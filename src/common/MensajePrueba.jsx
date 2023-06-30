@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-export default function MensajePrueba() {
+export default function MensajePrueba({ title }) {
     const location = useLocation();
     const navigate = useNavigate();
     const curso = location.pathname.split('/')[2]; // Extrae el nombre del curso de la URL
 
     const handleClick = () => {
-        navigate(`/ruta-a-la-prueba/${curso}`);
+        navigate(`/curso/${curso}/Examen`);
     };
 
     return (

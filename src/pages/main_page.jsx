@@ -12,18 +12,17 @@ const courses = [
 
 export default function Main_page() {
     return (
-        <div className="flex justify-center items-center h-screen my-8 mb-14">
-            <div className="courses-container grid grid-cols-1 md:grid-cols-3 gap-4 justify-center max-w-screen-xl mx-auto">
-                {courses.map((course, index) => (
-                    <div className="w-full col-span-1 aspect-w-1 aspect-h-1"> {/* Agregada clase "aspect-w-1 aspect-h-1" */}
-                        <CourseCard key={index} {...course} />
-                    </div>
-                ))}
+      <div className="flex justify-center items-center h-screen my-8 mb-14">
+        <div className="courses-container grid grid-cols-1 md:grid-cols-3 gap-4 justify-center max-w-screen-xl mx-auto">
+          {courses.map((course, index) => (
+            <div className="w-full col-span-1 aspect-w-1 aspect-h-1"> {/* Agregada clase "aspect-w-1 aspect-h-1" */}
+              <CourseCard key={index} {...course} />
             </div>
+          ))}
         </div>
+      </div>
     );
-}
-
+  }
   
   
 
