@@ -49,7 +49,7 @@ function Clase({ videoUrl, handleExamenClick }) {
         navigate('/examen');
     };
     const Video = () => (
-        <div className="relative pt-56.25 w-full overflow-hidden px-32" style={{ height: '500px' }}>
+        <div className="relative pt-56.25 w-full overflow-hidden px-32 bg-gray-200" style={{ height: '500px' }}>
             <iframe className="embed-responsive-item inset-0 h-full w-full" src="https://www.youtube.com/embed/1dMoE9Wsaaw" title="YouTube video player" 
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
