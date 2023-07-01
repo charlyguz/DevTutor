@@ -19,6 +19,7 @@ import IATemario from "./pages/IAPageComponents/IaTemario";
 import NubeTemario from "./pages/NubePageComponents/NubeTemario";
 import AlgoritmosTemario from "./pages/AlgoritmosPageComponents/AlgoritmosTemario";
 import PythonClase from "./pages/PythonPageComponents/PythonClase";
+import ExamenPage from "./pages/PythonPageComponents/PythonExamen";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/curso/nube/temario" element={<NubeTemario />} />
           <Route path="/curso/algoritmos/temario" element={<AlgoritmosTemario />} />
           <Route path="/curso/:curso/temario/:id" element={<PythonClase />} />
+          <Route path="/examen" element={<ExamenPage />} />
 
         </Routes>
         <Footer className="mt-10"/>

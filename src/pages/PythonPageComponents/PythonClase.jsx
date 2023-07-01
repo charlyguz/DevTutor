@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function Clase({ videoUrl, handleExamenClick }) {
+    const navigate = useNavigate();
+
+    const handleIrExamenClick = () => {
+        navigate('/examen');
+    };
     const Video = () => (
         <div className="relative pt-56.25 w-full overflow-hidden">
             <iframe className="absolute top-0 left-0 w-full h-full" src={videoUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -23,9 +30,11 @@ function Clase({ videoUrl, handleExamenClick }) {
             <h2 className="text-xl">Clase</h2>
             <Video />
             <Chat />
-            <button onClick={handleExamenClick} className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button onClick={handleIrExamenClick} className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Ir al Examen
             </button>
+
+
         </div>
     );
 }

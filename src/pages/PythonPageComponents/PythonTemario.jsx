@@ -16,14 +16,17 @@ const Subtema = ({ nombre, subtemas }) => {
                     className={`h-5 w-5 text-blue-500 transform transition-transform duration-200 ${expandir ? 'rotate-180' : ''}`}
                 />
             </div>
-            {expandir && subtemas.map((subtema, index) => 
-                <Link to={`/curso/${curso}/temario/${index}`} key={index} className="bg-gray-200 rounded-md p-2 mt-2 ml-4">
-                    {subtema}
-                </Link>
-            )}
+            <div className={`flex flex-col ${expandir ? '' : 'hidden'}`}>
+                {subtemas.map((subtema, index) => 
+                    <Link to={`/curso/${curso}/temario/${index}`} key={index} className="bg-gray-200 rounded-md p-2 mt-2 ml-4">
+                        {subtema}
+                    </Link>
+                )}
+            </div>
         </div>
     );
 };
+
 
 
 const Nivel = ({ nivel, temas, desbloqueado }) => {
