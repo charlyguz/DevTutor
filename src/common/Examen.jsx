@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 export default function Examen() {
     const { curso } = useParams();
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",
       });
       
       const openai = new OpenAIApi(configuration);
@@ -51,7 +51,6 @@ export default function Examen() {
             <div className="flex flex-col flex-grow w-full max-w-screen-lg bg-white shadow-xl rounded-lg overflow-hidden">
               <div className="flex flex-col flex-grow h-0 p-4 overflow-auto">
                 <div className="flex w-full mt-2 space-x-3 max-w-xs">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
                     <div>
                     <div className="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
                         <h1>Bienvenido! Estás en la prueba del curso de {curso}</h1>
@@ -59,7 +58,6 @@ export default function Examen() {
                     </div>
                 </div>
                 <div className="flex w-full mt-2 space-x-3 max-w-xs">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
                     <div>
                     <div className="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
                         <h1>Listo para tu examen de prueba?</h1>
@@ -72,7 +70,6 @@ export default function Examen() {
                             <div key={index}>
                                 {chat.role === 'assistant' ? (
                                     <div className="flex w-full mt-2 space-x-3 max-w-xl">
-                                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
                                         <div>
                                             <div className="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
                                                 <p className={isTyping ? "" : "hide"}>
@@ -98,7 +95,6 @@ export default function Examen() {
                 {
                     isTyping ? (
                         <div className="flex w-full mt-2 space-x-3 max-w-xs">
-                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
                             <div>
                                 <div className="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
                                     <p className={isTyping ? "" : "hide"}>
@@ -117,7 +113,7 @@ export default function Examen() {
                     type="text"
                     name='message'
                     value={message}
-                    placeholder="Pregunta tu duda"
+                    placeholder="Escribe tu respuesta"
                     onChange={e => setMessage(e.target.value)}
                   ></input>
                 </form>
