@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { LockClosedIcon, CheckCircleIcon } from '@heroicons/react/solid';
 import { ChevronDownIcon } from '@heroicons/react/solid';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const Subtema = ({ nombre, subtemas }) => {
     const [expandir, setExpandir] = useState(false);
     const handleExpandirClick = () => setExpandir(!expandir);
+    const { curso } = useParams(); // Obtiene el curso actual de los parámetros de la ruta
 
     return (
         <div>
@@ -15,13 +17,14 @@ const Subtema = ({ nombre, subtemas }) => {
                 />
             </div>
             {expandir && subtemas.map((subtema, index) => 
-                <div key={index} className="bg-gray-200 rounded-md p-2 mt-2 ml-4">
+                <Link to={`/curso/${curso}/temario/${index}`} key={index} className="bg-gray-200 rounded-md p-2 mt-2 ml-4">
                     {subtema}
-                </div>
+                </Link>
             )}
         </div>
     );
 };
+
 
 const Nivel = ({ nivel, temas, desbloqueado }) => {
     const [expandir, setExpandir] = useState(false);
