@@ -2,13 +2,24 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function MensajePrueba({ title }) {
+    const formatCourseTitle = (text) => {
+        if (text === 'estructurasdedatosyalgoritmos') {
+            return 'Estructuras de Datos y Algoritmos';
+        } 
+
+        // Si no es el caso especial, simplemente retorna la cadena tal como está.
+        return text.charAt(0).toUpperCase() + text.slice(1);
+    };
+    
     const location = useLocation();
     const navigate = useNavigate();
-    const curso = location.pathname.split('/')[2]; // Extrae el nombre del curso de la URL
+    const curso = formatCourseTitle(location.pathname.split('/')[2]); // Extrae el nombre del curso de la URL
 
     const handleClick = () => {
         navigate(`/curso/${curso}/Examen`);
     };
+
+    
 
     return (
         <div className="flex flex-col justify-center items-center px-8 text-center bg-gray-700 text-white h-screen gap-y-16">

@@ -22,10 +22,10 @@ function App() {
           <Route path="/" element={<Main_page />} />
           <Route path="/curso/python" element={<PythonPage />} />
           <Route path="/curso/javascript" element={<JavaScriptPage />} />
-          <Route path="/curso/algoritmos" element={<Algoritmos />} />
+          <Route path="/curso/:curso" element={<Algoritmos />} />
           <Route path="/curso/ia" element={<IA />} />
           <Route path="/curso/nube" element={<Nube />} />
-          <Route path="/curso/cursoR" element={<CursoR />} />
+          <Route path="/curso/:curso" element={<CursoR />} />
           <Route path="/curso/:curso/Examen" element={<Examen />} />
         </Routes>
         <Footer className="mt-10"/>
