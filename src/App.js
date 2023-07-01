@@ -12,6 +12,8 @@ import Algoritmos from "./pages/Algoritmos";
 import IA from "./pages/IA";
 import Nube from "./pages/Nube";
 import CursoR from "./pages/CursoR";
+import PythonTemario from "./pages/PythonPageComponents/PythonTemario";
+
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
           <Route path="/curso/nube" element={<Nube />} />
           <Route path="/curso/:curso" element={<CursoR />} />
           <Route path="/curso/:curso/Examen" element={<Examen />} />
+          {/* <Route exact path="/" component={HomePage} /> Esto redirige a la página de inicio, que no has mencionado aún */}
+          <Route path="/curso/python/temario" element={<PythonTemario />} />
+
         </Routes>
         <Footer className="mt-10"/>
       </div>

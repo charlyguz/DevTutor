@@ -3,12 +3,24 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { MenuIcon } from '@heroicons/react/outline';
+import { Link } from "react-router-dom";
+import Temario from './Temario';
 
 const navigation = [
   { name: 'Cursos', href: '#' },
   { name: 'Mi Aprendizaje', href: '#' },
   { name: 'Mi Perfil', href: '#' },
 ]
+
+const cursos = [
+  { name: 'Python', href: '/curso/python/temario' },
+  { name: 'JavaScript', href: '/curso/javascript/temario' },
+  { name: 'React', href: '/curso/react/temario' },
+  { name: 'Nube', href: '/curso/nube/temario' },
+  { name: 'IA', href: '/curso/ia/temario' },
+  { name: 'Estructuras de Datos y Algoritmos', href: '/curso/estructurasdedatosyalgoritmos/temario' },
+]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -22,11 +34,13 @@ export default function Header() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-              />
+              <Link to="/">
+                <img
+                  className="h-8 w-auto sm:h-10"
+                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                  alt=""
+                />
+              </Link>
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -37,9 +51,43 @@ export default function Header() {
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
-                {item.name}
-              </a>
+              item.name === 'Cursos'
+                ? <Popover className="relative group">
+                    <Popover.Button className="text-base font-medium text-white hover:text-gray-300">
+                      {item.name}<ChevronDownIcon className="h-5 w-5 text-white ml-2" />
+                    </Popover.Button>
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-200"
+                      enterFrom="opacity-0 translate-y-1"
+                      enterTo="opacity-100 translate-y-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 translate-y-1"
+                    >
+                      <Popover.Panel className="absolute z-10 mt-3 px-2 w-screen max-w-sm sm:px-0">
+                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                          {cursos.map((curso) => (
+                            <Link
+                              key={curso.name}
+                              to={curso.href} // Aquí estaba el error
+                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                            >
+                              <div className="ml-4">
+                                <p className="text-base font-medium text-gray-900">{curso.name}</p>
+                              </div>
+                            </Link>
+                          ))}
+
+                          </div>
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </Popover>
+                : <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
+                    {item.name}
+                  </a>
             ))}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -58,4 +106,3 @@ export default function Header() {
     </Popover>
   )
 }
-
