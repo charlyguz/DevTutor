@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 export default function Examen() {
     const { curso } = useParams();
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",//Actualizar!!!!
       });
       
       const openai = new OpenAIApi(configuration);
