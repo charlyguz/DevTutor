@@ -1,78 +1,70 @@
+# Getting Started with Create React App
 
-# DevTutor
-*DevTutor* es una pagina web de cursos enfocados a la programación, con diferentes temas para poder desarrollar las habilidades que el usuario requiera aprender o reforzar dependiendo del nivel en el que se encuentre.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Contenido
+## Available Scripts
 
-- [Funcionamiento](#Funcionamiento)
-- [Tecnologias empleadas](#Tecnologias-empleadas)
-- [Demo](#Demo)
-- [Quick Start](#Quick-Start)
-- [Autores](#Autores)
-## Funcionamiento
+In the project directory, you can run:
 
-Todo el curso es evaluado mediante un a inteligencia artificial constantemente, tal que para poder determinar el nivel de conocimientos, la misma aplica un examen diagnostico dependiendo del curso a tratar.
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Tecnlogias empleadas
-- React.js
-- TailwindCSS
-- OpenAI
-- Deepbrain AI
-## Demo
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Esta es la demo de nuestra pagina web!
-- [DevTutor](https://devtutorai.azurewebsites.net/)
-Puedes consultar el repositorio del proyecto en el siguiente enlace
-- [Aqui](https://github.com/charlyguz/DevTutor)
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Roadmap
+### `npm run build`
 
-Para mostrar el funcionamiento de la demo, a continuación habra una explicación breve de lo que se encontrara dentro del sitio web.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-![Inicio](https://github.com/charlyguz/DevTutor/src/assets/img/Menu.png?raw=true)
-- El menu principal donde se encontrararn todos los cursos que se tienen disponibles para tomar.
-![Inicio_Curso](https://github.com/charlyguz/DevTutor/src/assets/img/InicioCurso.png?raw=true)
-- Una breve bienvenida previa al curso.
-![Prueba](https://github.com/charlyguz/DevTutor/src/assets/img/ExamenPrueba.png?raw=true)
-- Examen de posicionamiento por la IA (para evaluar los conocimientos previos al curso).
-![Cursos](https://github.com/charlyguz/DevTutor/src/assets/img/Cursos.png?raw=true)
-- Los cursos con las dificultades que se pueden tomar.
-![Clases](https://github.com/charlyguz/DevTutor/src/assets/img/Clases.png?raw=true)
-- Las clases del cruso generado todo por IA con apartado para dudas.
-![ExamenTema](https://github.com/charlyguz/DevTutor/src/assets/img/ExamenClases.png?raw=true)
-- Evaluación final del tema visto.
-## Quick Start
-Para ejecutar el proyecto de manera local puedes seguir los siguientes pasos:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Clona el repositorio o puedes descargar el .zip
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```bash
-  git clone https://github.com/charlyguz/DevTutor
-```
+### `npm run eject`
 
-En la terminal, dirigete a la carpeta donde se encuentra el proyecto
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```bash
-  cd DevTutor
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instala las dependencias
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-```bash
-  npm install
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Corre el proyecto
+## Learn More
 
-```bash
-  npm run start
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Autores
+### Code Splitting
 
-- [@charlyguz](https://www.github.com/octokatherine) - Carlos Guzman
-- [@Gerardo-S-C](https://github.com/Gerardo-S-C) - Gerardo Sandoval
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
