@@ -4,7 +4,7 @@ import { Configuration, OpenAIApi } from 'openai';
 
 function Clase({ videoUrl, handleExamenClick }) {
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",
       });
       
       const openai = new OpenAIApi(configuration);

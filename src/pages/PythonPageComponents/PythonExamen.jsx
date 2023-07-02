@@ -5,7 +5,7 @@ export default function PythonExamen({ handleExamenSubmit }) {
   const [tiempoRestante, setTiempoRestante] = useState(150);  // 2 minutos y medio en segundos
 
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "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",
   });
   const openai = new OpenAIApi(configuration);
       

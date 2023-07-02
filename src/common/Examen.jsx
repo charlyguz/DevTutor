@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 export default function Examen() {
     const { curso } = useParams();
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",
       });
       
       const openai = new OpenAIApi(configuration);
@@ -85,7 +85,6 @@ export default function Examen() {
                                         <p className="text-sm">{chat.content}</p>
                                         </div>
                                     </div>
-                                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-gray-300"></div>
                                     </div>
                                 )}
                             </div>
