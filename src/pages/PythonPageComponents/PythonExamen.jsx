@@ -5,10 +5,10 @@ export default function PythonExamen({ handleExamenSubmit }) {
   const [tiempoRestante, setTiempoRestante] = useState(150);  // 2 minutos y medio en segundos
 
   const configuration = new Configuration({
-    apiKey: "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",//Actualizar
+    apiKey: process.env.REACT_APP_API_KEY,//Actualizar por variable de entorno
   });
   const openai = new OpenAIApi(configuration);
-      
+
   const [message, setMessage] = useState("");
   const [chats, setChats] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
@@ -38,6 +38,8 @@ export default function PythonExamen({ handleExamenSubmit }) {
         setIsTyping(false);
       })
       .catch((error) => {
+        console.log("API: ");
+        console.log(process.env.REACT_APP_API_KEY);
         console.log(error);
       });
   };

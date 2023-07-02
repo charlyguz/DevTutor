@@ -4,8 +4,8 @@ import { Configuration, OpenAIApi } from 'openai';
 
 function Clase({ videoUrl, handleExamenClick }) {
     const configuration = new Configuration({
-        apiKey: "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",//Actualizar
-      });
+        apiKey: process.env.REACT_APP_API_KEY,//Actualizar por variable de entorno
+    });
       
       const openai = new OpenAIApi(configuration);
       
